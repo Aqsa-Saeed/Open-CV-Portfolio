@@ -1,39 +1,32 @@
-# 🖼️ OpenCV Projects Portfolio
+# 🖼️ OpenCV Projects Portfolio  
 
-This repository highlights the projects I’ve built using OpenCV, MediaPipe, and Python, ranging from beginner exercises to advanced real-time applications.
+This repository showcases my **Computer Vision Projects** built with **OpenCV, MediaPipe, and Python**.  
+It highlights my skills in:  
+✅ Real-time image & video processing  
+✅ Gesture recognition & hand tracking  
+✅ Face & object detection  
+✅ Automation with computer vision  
 
-It demonstrates my skills in:
-✅ Real-time image & video processing
-✅ Gesture recognition & hand tracking
-✅ Face detection & recognition
-✅ Automation with computer vision
+---
 
-🔹 Featured Projects
+## 🚀 Featured Projects  
 
-🎨 Live Webcam Drawing
+| Project | Description | Preview |
+|---------|-------------|---------|
+| 🎨 **Live Webcam Drawing** | Draw on the screen using hand gestures. | ![Demo](demo/webcam-draw.gif) |
+| ✋ **Finger Counter & Hand Detection** | Detect hands and count fingers in real time. | ![Demo](demo/finger-counter.gif) |
+| 🌞 **Brightness Control with Gestures** | Adjust screen brightness using hand gestures. | ![Demo](demo/brightness.gif) |
+| 🚗 **Car License Plate Detection** | Detect and read license plates from images/video. | ![Demo](demo/license-plate.gif) |
+| 🖱️ **Mouse Control with Hand Gestures** | Control your mouse cursor using your hand. | ![Demo](demo/mouse.gif) |
+| 🙂 **Face Mesh & Tilt Detection** | Detect facial landmarks and head tilt. | ![Demo](demo/facemesh.gif) |
+| 🎥 **Screen Recorder** | Record your screen using OpenCV & Python. | ![Demo](demo/screen-recorder.gif) |
+| 👥 **Real-Time Multi-Face Recognition** | Recognize and track multiple faces live. | ![Demo](demo/face-recognition.gif) |
 
-✋ Finger Counter & Hand Detection
+---
 
-🌞 Brightness Control using Gestures
+## 🛠️ Tech Stack  
+- **Languages**: Python  
+- **Libraries**: OpenCV, MediaPipe, NumPy  
+- **Applications**: Real-time gesture control, automation, face recognition  
 
-🚘 Car License Plate Detection
-
-🖱️ Mouse Control with Hand Gestures
-
-🙂 Face Mesh & Tilt Detection
-
-📹 Screen Recorder in Python
-
-👥 Real-Time Multi-Face Recognition
-
-🪄 Gesture-Controlled Webcam Filters
-
-👉 Scroll down for the full project list with links.
-
-🛠️ Tech Stack
-
-Languages: Python
-
-Libraries: OpenCV, MediaPipe, NumPy, PyAutoGUI, PyTesseract
-
-Focus Areas: Real-time video processing, gesture recognition, face & hand tracking, computer vision automation
+---
