@@ -59,29 +59,6 @@ frame_interval = int(fps * 2)          # Save every ~2 seconds
   Frame0.jpg, Frame1.jpg, Frame2.jpg, ...
   ```
 - Console will display the total number of saved frames.
-
----
-
-## 🖼️ How it Works (Flowchart)
-```mermaid
-flowchart TD
-    A[Start] --> B[Load video with OpenCV]
-    B --> C[Get FPS of video]
-    C --> D[Set frame interval]
-    D --> E[Read next frame]
-    E --> F{Frame read successful?}
-    F -- No --> G[Stop & Release Video]
-    F -- Yes --> H[Check if time exceeded (e.g., 45s)]
-    H -- Yes --> G
-    H -- No --> I{Is current frame at interval?}
-    I -- Yes --> J[Save frame as JPG]
-    I -- No --> K[Skip frame]
-    J --> E
-    K --> E
-    G --> L[Print total saved frames]
-    L --> M[End]
-```
-
 ---
 
 ## 📌 Customization
