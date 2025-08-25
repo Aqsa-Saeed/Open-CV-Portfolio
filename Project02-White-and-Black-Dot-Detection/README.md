@@ -19,7 +19,7 @@ Install the required dependency before running the project:
 
 ```bash
 pip install opencv-python
-
+```
 
 ---
 
@@ -28,10 +28,9 @@ pip install opencv-python
 DotDetection/
 │── WhiteDots.png       # Example input image
 │── BlackDots.jpg      # Example input image
-│── output.png          # Output with detected dots
+│── Output.png          # Output with detected dots
 │── dot_detector.py     # Main script
 │── README.md           # Project documentation
-
 ```
 
 ---
@@ -45,23 +44,30 @@ python dot_detector.py
 
 ### 2. Code Explanation
 ```python
-fps = int(cap.get(cv2.CAP_PROP_FPS))   # Get video FPS
-frame_interval = int(fps * 2)          # Save every ~2 seconds
+# Convert image to grayscale
+gray = cv2.imread(path, 0)
+
+# Thresholding for separating dots
+_, threshed = cv2.threshold(gray, 100, 255, cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)
+
+# Find contours
+cnts = cv2.findContours(threshed, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)[-2]
 ```
 
-- `fps` → Frames per second of the video  
-- `frame_interval` → Number of frames to skip before saving the next one  
-- `count > fps * 45` → Stops after **45 seconds** (can be changed)  
+- `cv2.threshold()` → Separates dots from the background  
+- `cv2.findContours()` → Finds outlines of the dots  
+- You can filter small noise using contour area checks  
 
-### 3. Output
-- Extracted frames will be saved in the **current folder** as:
-  ```
-  Frame0.jpg, Frame1.jpg, Frame2.jpg, ...
-  ```
-- Console will display the total number of saved frames.
 ---
 
-## 📌 Customization
-- Change `frame_interval` to control how frequently frames are saved.
-- Adjust the stopping condition (`fps * 45`) to extract frames for a different duration.
-- Modify the filename in `cv2.imwrite()` to save frames in a custom folder.
+## 🎯 Output
+- The program draws contours around each dot  
+- Console prints the number of **white** and **black** dots detected  
+
+Example:
+```text
+White Dots: 583
+Black Dots: 23
+```
+
+
